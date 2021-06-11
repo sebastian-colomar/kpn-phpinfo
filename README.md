@@ -1,1 +1,1 @@
-# kpn-phpinfo
+# phpinfo
