@@ -18,7 +18,7 @@ docker build -t my_image phpinfo/
 ```
 ```
 # php -f index.php -S 0.0.0.0:8080
-docker run --detach --entrypoint php --name phpinfo --restart always --read-only --user nobody:nogroup my_image -f index.php -S 0.0.0.0:8080
+docker run --detach --entrypoint php --name phpinfo --publish 8080 --restart always --read-only --user nobody:nogroup my_image -f index.php -S 0.0.0.0:8080
 ```
 ```
 docker ps
