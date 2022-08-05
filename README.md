@@ -13,3 +13,6 @@ FROM php
 COPY index.php .
 EOF
 ```
+```
+docker build -t my_image phpinfo/
+```
