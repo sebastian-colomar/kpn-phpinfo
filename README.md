@@ -31,3 +31,20 @@ docker swarm init --advertise-addr $( hostname -i )
 ```
 docker node ls
 ```
+```
+tee docker-compose.yaml 0<<EOF
+services:
+  phpinfo:
+    command:
+      - -f
+      - index.php
+      - -S
+      - 0.0.0.0:8080
+    entrypoint: php
+    image: my_image
+    ports:
+      - 8080
+    user: nobody:nogroup
+version: "3.8"
+EOF
+```
