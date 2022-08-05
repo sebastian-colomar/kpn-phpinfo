@@ -25,3 +25,6 @@ docker ps
 docker top phpinfo
 docker logs phpinfo
 ```
+```
+docker swarm init --advertise-addr $( hostname -i )
+```
