@@ -48,3 +48,6 @@ services:
 version: "3.8"
 EOF
 ```
+```
+docker stack deploy -c docker-compose.yaml phpinfo
+```
