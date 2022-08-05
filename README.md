@@ -28,3 +28,6 @@ docker logs phpinfo
 ```
 docker swarm init --advertise-addr $( hostname -i )
 ```
+```
+docker node ls
+```
