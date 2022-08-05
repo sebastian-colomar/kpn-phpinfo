@@ -51,3 +51,8 @@ EOF
 ```
 docker stack deploy -c docker-compose.yaml phpinfo
 ```
+```
+docker stack ls
+docker stack ps phpinfo
+docker stack services phpinfo
+```
