@@ -40,6 +40,7 @@ docker node ls
 ```
 ```
 tee docker-compose.yaml 0<<EOF
+
 services:
   phpinfo:
     command:
@@ -53,6 +54,7 @@ services:
       - 8080
     user: nobody:nogroup
 version: "3.8"
+
 EOF
 ```
 ```
