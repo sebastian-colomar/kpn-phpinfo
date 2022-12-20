@@ -17,6 +17,9 @@ COPY index.php .
 EOF
 ```
 ```
+docker images
+```
+```
 docker build -t my_image phpinfo/
 ```
 ```
