@@ -7,6 +7,7 @@ mkdir phpinfo/
 ```
 echo '<?php phpinfo();?>' | tee phpinfo/index.php
 ```
+https://hub.docker.com/_/php
 ```
 tee phpinfo/Dockerfile 0<<EOF
 
