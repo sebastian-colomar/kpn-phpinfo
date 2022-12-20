@@ -11,7 +11,8 @@ https://hub.docker.com/_/php
 ```
 tee phpinfo/Dockerfile 0<<EOF
 
-FROM php:alpine
+FROM alpine
+RUN apk add php
 COPY index.php .
 
 EOF
