@@ -11,7 +11,7 @@ https://hub.docker.com/_/php
 ```
 tee phpinfo/Dockerfile 0<<EOF
 
-FROM php
+FROM php:alpine
 COPY index.php .
 
 EOF
