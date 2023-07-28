@@ -52,6 +52,8 @@ services:
     image: my_image
     ports:
       - 8080
+    read_only: true
+    restart: always
     user: nobody:nogroup
 version: "3.8"
 
