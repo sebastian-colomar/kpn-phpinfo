@@ -44,11 +44,11 @@ tee docker-compose.yaml 0<<EOF
 services:
   phpinfo:
     command:
+      - php
       - -f
       - index.php
       - -S
       - 0.0.0.0:8080
-    entrypoint: php
     image: my_image
     ports:
       - 8080
