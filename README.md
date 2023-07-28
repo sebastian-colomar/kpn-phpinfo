@@ -49,11 +49,13 @@ services:
       - index.php
       - -S
       - 0.0.0.0:8080
+    deploy:
+      restart_policy:
+        condition: any
     image: my_image
     ports:
       - 8080
     read_only: true
-    restart: always
     user: nobody:nogroup
 version: "3.8"
 
