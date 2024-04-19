@@ -32,6 +32,10 @@ docker swarm init --advertise-addr $( hostname -i )
 docker node ls
 ```
 ```
+mkdir /tmp/phpinfo/
+echo '<?php phpinfo();?>' | tee /tmp/phpinfo/index.php
+```
+```
 tee docker-compose.yaml 0<<EOF
 
 services:
