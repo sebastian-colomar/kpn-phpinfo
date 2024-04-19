@@ -9,7 +9,11 @@ echo '<?php phpinfo();?>' | tee phpinfo/index.php
 - https://github.com/docker-library/php/blob/master/8.3/alpine3.19/cli/Dockerfile
 ```
 docker images
+```
+```
 docker pull docker.io/library/php:alpine
+```
+```
 docker images
 ```
 # php -f index.php -S 0.0.0.0:8080
