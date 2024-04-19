@@ -17,6 +17,7 @@ docker pull docker.io/library/php:alpine
 docker images
 ```
 # php -f index.php -S 0.0.0.0:8080
+```
 docker run --detach --name phpinfo --publish 8080 --volume $PWD/phpinfo:/phpinfo --workdir /phpinfo docker.io/library/php:alpine php -f index.php -S 0.0.0.0:8080
 ```
 ```
