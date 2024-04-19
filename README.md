@@ -7,25 +7,15 @@ mkdir phpinfo/
 ```
 echo '<?php phpinfo();?>' | tee phpinfo/index.php
 ```
-https://hub.docker.com/_/php
-```
-tee phpinfo/Dockerfile 0<<EOF
-
-FROM alpine
-RUN apk add php
-COPY index.php .
-
-EOF
-```
+- https://hub.docker.com/_/php
+- https://github.com/docker-library/php/blob/master/8.3/alpine3.19/cli/Dockerfile
 ```
 docker images
-```
-```
-docker build -t my_image phpinfo/
-```
+docker pull docker.io/library/php:alpine
+docker images
 ```
 # php -f index.php -S 0.0.0.0:8080
-docker run --detach --name phpinfo --publish 8080 --restart always --read-only --user nobody:nogroup my_image php -f index.php -S 0.0.0.0:8080
+docker run --detach --name phpinfo --publish 8080 --volume $PWD/phpinfo:/phpinfo --workdir /phpinfo docker.io/library/php:alpine php -f index.php -S 0.0.0.0:8080
 ```
 ```
 docker ps
@@ -49,14 +39,9 @@ services:
       - index.php
       - -S
       - 0.0.0.0:8080
-    deploy:
-      restart_policy:
-        condition: any
-    image: my_image
+    image: docker.io/library/php:alpine
     ports:
       - 8080
-    read_only: true
-    user: nobody:nogroup
 version: "3.8"
 
 EOF
