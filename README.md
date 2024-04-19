@@ -47,7 +47,6 @@ services:
       - -S
       - 0.0.0.0:8080
     deploy:
-      mode: replicated
       placement:
         constraints:
           - node.role == worker
