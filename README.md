@@ -45,6 +45,9 @@ services:
     image: docker.io/library/php:alpine
     ports:
       - 8080
+    volume:
+      - /tmp/phpinfo:/phpinfo
+    working_dir: /phpinfo
 version: "3.8"
 
 EOF
