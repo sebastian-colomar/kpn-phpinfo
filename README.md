@@ -3,8 +3,6 @@
 https://labs.play-with-docker.com/
 ```
 mkdir phpinfo/
-```
-```
 echo '<?php phpinfo();?>' | tee phpinfo/index.php
 ```
 - https://hub.docker.com/_/php
