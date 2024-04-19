@@ -46,6 +46,11 @@ services:
       - index.php
       - -S
       - 0.0.0.0:8080
+    deploy:
+      mode: replicated
+      placement:
+        constraints:
+          - node.role == worker
     image: docker.io/library/php:alpine
     ports:
       - 8080
