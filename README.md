@@ -36,25 +36,9 @@ mkdir /tmp/phpinfo/
 echo '<?php phpinfo();?>' | tee /tmp/phpinfo/index.php
 ```
 ```
-tee docker-compose.yaml 0<<EOF
+git clone https://github.com/sebastian-colomar/kpn-phpinfo.git
 
-services:
-  phpinfo:
-    command:
-      - php
-      - -f
-      - index.php
-      - -S
-      - 0.0.0.0:8080
-    image: docker.io/library/php:alpine
-    ports:
-      - 8080
-    volumes:
-      - /tmp/phpinfo:/phpinfo
-    working_dir: /phpinfo
-version: "3.8"
-
-EOF
+cd kpn-phpinfo
 ```
 ```
 docker stack deploy -c docker-compose.yaml phpinfo
